@@ -3,6 +3,52 @@ import { auth } from "../../lib/auth";
 import { prisma } from "../../lib/prisma";
 import { ICreaeteDoctorPayload } from "./user.interface";
 
+const doctorSelect = {
+  id: true,
+  name: true,
+  email: true,
+  profilePhoto: true,
+  contactNumber: true,
+  address: true,
+  registrationNumber: true,
+  experience: true,
+  gender: true,
+  appointmentFee: true,
+  qualification: true,
+  currentWorkingPlace: true,
+  designation: true,
+  averageRating: true,
+  createdAt: true,
+  updatedAt: true,
+  user: {
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      image: true,
+      role: true,
+      status: true,
+      emailVerified: true,
+      createdAt: true,
+      updatedAt: true,
+      isDeleted: true,
+      deletedAt: true,
+    },
+  },
+  doctorSpecialities: {
+    select: {
+      speciality: {
+        select: {
+          id: true,
+          title: true,
+          description: true,
+          icon: true,
+        },
+      },
+    },
+  },
+};
+
 const createDoctor = async (payload: ICreaeteDoctorPayload) => {
   const specialities: Speciality[] = [];
   for (const specialityId of payload.specialities) {
@@ -60,44 +106,7 @@ const createDoctor = async (payload: ICreaeteDoctorPayload) => {
         where: {
           id: doctorData.id,
         },
-        select: {
-          name: true,
-          email: true,
-          profilePhoto: true,
-          contactNumber: true,
-          address: true,
-          registrationNumber: true,
-          experience: true,
-          gender: true,
-          appointmentFee: true,
-          qualification: true,
-          currentWorkingPlace: true,
-          designation: true,
-          averageRating: true,
-          user: {
-            select: {
-              id: true,
-              email: true,
-              name: true,
-              profilePhoto: true,
-              role: true,
-              status: true,
-              emailVerified: true,
-              createdAt: true,
-              updatedAt: true,
-              isDeleted: true,
-              deletedAt: true,
-            },
-          },
-          select: {
-            speciality: {
-              select: {
-                title: true,
-                id: true,
-              },
-            },
-          },
-        },
+        select: doctorSelect,
       });
       return doctor;
     });
@@ -113,6 +122,23 @@ const createDoctor = async (payload: ICreaeteDoctorPayload) => {
   }
 };
 
+const getDoctor = async (id: string) => {
+  const doctor = await prisma.doctor.findFirst({
+    where: {
+      id,
+      isDeleted: false,
+    },
+    select: doctorSelect,
+  });
+
+  if (!doctor) {
+    throw new Error("Doctor not found");
+  }
+
+  return doctor;
+};
+
 export const userService = {
   createDoctor,
+  getDoctor,
 };
