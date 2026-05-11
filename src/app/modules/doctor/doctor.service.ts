@@ -1,3 +1,5 @@
+import status from "http-status";
+import AppError from "../../errorHelpers/AppError";
 import { prisma } from "../../lib/prisma";
 import { IUpdateDoctorPayload } from "./doctor.interface";
 
@@ -32,7 +34,7 @@ const updateDoctor = async (id: string, payload: IUpdateDoctorPayload) => {
     },
   });
   if (!doctorExist) {
-    throw new Error("Doctor not found");
+    throw new AppError(status.NOT_FOUND, "Doctor not found");
   }
   //Saparate specialities from payload
   const { specialities, ...doctorData } = payload;
