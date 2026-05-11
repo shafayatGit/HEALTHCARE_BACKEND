@@ -17,9 +17,8 @@ export const createDoctorZodSchema = z.object({
     contactNumber: z
       .string("Contact number is required")
       .min(11, "Contact number must be at least 11 characters")
-      .max(14, "Contact number must be less than 14 characters").optional(),
-
-    specialization: z.string("Specialization is required"),
+      .max(14, "Contact number must be less than 14 characters")
+      .optional(),
 
     address: z
       .string("Address is required")
@@ -32,7 +31,7 @@ export const createDoctorZodSchema = z.object({
     experience: z
       .int("Experience must be an integer")
       .nonnegative("Experience must be a non-negative integer")
-      .optional(), 
+      .optional(),
 
     gender: z.enum(
       [Gender.MALE, Gender.FEMALE],
