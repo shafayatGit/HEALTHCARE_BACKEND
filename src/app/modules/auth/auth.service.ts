@@ -4,6 +4,7 @@ import AppError from "../../errorHelpers/AppError";
 import { auth } from "../../lib/auth";
 import { prisma } from "../../lib/prisma";
 import { ILoginUser, IRegisterPatient } from "./auth.interface";
+import { tokenUtils } from "../../utils/token";
 
 const registerPatient = async (payload: IRegisterPatient) => {
   const { name, email, password } = payload;
@@ -57,11 +58,34 @@ const loginUser = async (payload: ILoginUser) => {
   if (data.user.isDeleted || data.user.status === UserStatus.Deleted) {
     throw new AppError(status.NOT_FOUND, "User is deleted");
   }
-  return data;
+
+  const accessToken = tokenUtils.getAccessToken({
+    userId: data.user.id,
+    roles: data.user.role,
+    name: data.user.name,
+    email: data.user.email,
+    status: data.user.status,
+    isDeleted: data.user.isDeleted,
+    emailVerified: data.user.emailVerified,
+  });
+
+  const refreshToken = tokenUtils.getRefreshToken({
+    userId: data.user.id,
+    roles: data.user.role,
+    name: data.user.name,
+    email: data.user.email,
+    status: data.user.status,
+    isDeleted: data.user.isDeleted,
+    emailVerified: data.user.emailVerified,
+  });
+  return {
+    ...data,
+    accessToken,
+    refreshToken,
+  };
 };
 
 export const AuthService = {
   registerPatient,
   loginUser,
 };
- 
