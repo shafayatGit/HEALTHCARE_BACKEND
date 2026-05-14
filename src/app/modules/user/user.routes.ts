@@ -9,10 +9,12 @@ import { checkAuth } from "../../middleware/checkAuth";
 const router = Router();
 
 router.post(
-  "/create-doctor",checkAuth(Role.ADMIN, Role.SUPER_ADMIN),
+  "/create-doctor",
+  checkAuth(Role.ADMIN, Role.SUPER_ADMIN),
   validateRequest(createDoctorValidationSchema),
   userController.createDoctor,
 );
+router.post("/create-admin", userController.createAdmin);
 // router.get("/doctor/:id", userController.getDoctor);
 
 export const userRoutes = router;

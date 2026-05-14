@@ -161,6 +161,9 @@ const createAdmin = async (payload: ICreateAdminPayload) => {
         userId: userData.user.id,
         ...admin,
       },
+      include: {
+        user: true,
+      },
     });
 
     return adminData;
