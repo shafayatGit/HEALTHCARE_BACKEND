@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthcare ERD</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: #0f172a;
+        color: #f8fafc;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        padding: 1rem 1.5rem;
+        background: #1e293b;
+        border-bottom: 1px solid #334155;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      h1 { font-size: 1.25rem; font-weight: 600; }
+      .actions { display: flex; gap: 0.75rem; }
+      a, button {
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+      }
+      .btn-primary {
+        background: #3b82f6;
+        color: #fff;
+      }
+      .btn-primary:hover { background: #2563eb; }
+      .btn-secondary {
+        background: #334155;
+        color: #e2e8f0;
+      }
+      .btn-secondary:hover { background: #475569; }
+      main {
+        flex: 1;
+        overflow: auto;
+        padding: 1rem;
+        background: #f1f5f9;
+      }
+      .diagram-wrap {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+        overflow: auto;
+        min-height: calc(100vh - 120px);
+      }
+      .diagram-wrap img,
+      .diagram-wrap object {
+        display: block;
+        max-width: none;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Healthcare Backend — Entity Relationship Diagram</h1>
+      <div class="actions">
+        <a class="btn-primary" href="/ERD.svg" download="healthcare-erd.svg">Download SVG</a>
+        <a class="btn-secondary" href="/ERD.svg" target="_blank">Open SVG</a>
+      </div>
+    </header>
+    <main>
+      <div class="diagram-wrap">
+        <object data="/ERD.svg" type="image/svg+xml" width="1480" height="1980">
+          <img src="/ERD.svg" alt="Healthcare ERD" width="1480" />
+        </object>
+      </div>
+    </main>
+  </body>
+</html>

@@ -15,6 +15,7 @@
     "pull": "prisma db pull",
     "seed": "prisma db seed",
     "reset": "prisma db reset",
+    "erd": "node scripts/generate-erd.mjs",
     "dev": "tsx watch src/server.ts"
   },
   "keywords": [],

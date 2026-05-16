@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1980" width="1480" height="1980">
+  <defs>
+    <filter id="cardShadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
+  <text x="740" y="28" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a" font-family="Segoe UI, system-ui, sans-serif">Healthcare Backend — Entity Relationship Diagram</text>
+  <text x="740" y="50" text-anchor="middle" font-size="12" fill="#64748b" font-family="Segoe UI, sans-serif">All attributes · PostgreSQL · Prisma</text>
+  <g id="relationships"><g class="rel">
+    <path d="M 830 193 Q 660 193 660 171 T 490 149" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="664" y="167" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 830 193 Q 1010 193 1010 198.5 T 1190 204" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="1014" y="194.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 830 193 Q 510 193 510 372 T 190 551" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="514" y="368" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 830 193 Q 680 193 680 377.5 T 530 562" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="684" y="373.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 830 193 Q 850 193 850 421.5 T 870 650" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="854" y="417.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 870 650 Q 1070 650 1070 712 T 1270 774" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="1074" y="708" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 1270 529 Q 1270 529 1270 651.5 T 1270 774" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="1274" y="647.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 870 650 Q 680 650 680 813 T 490 976" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="684" y="809" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 190 976 Q 340 976 340 976 T 490 976" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="344" y="972" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 530 562 Q 660 562 660 791 T 790 1020" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="664" y="787" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 870 650 Q 830 650 830 835 T 790 1020" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="834" y="831" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 190 976 Q 490 976 490 998 T 790 1020" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="494" y="994" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 790 1020 Q 490 1020 490 1210 T 190 1400" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="494" y="1206" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 790 1020 Q 660 1020 660 1215.5 T 530 1411" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="664" y="1211.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 790 1020 Q 830 1020 830 1204.5 T 870 1389" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="834" y="1200.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 530 562 Q 870 562 870 964.5 T 1210 1367" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="874" y="960.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 530 562 Q 530 562 530 1211.5 T 530 1861" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="534" y="1207.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:1</text>
+  </g>
+<g class="rel">
+    <path d="M 530 562 Q 360 562 360 981 T 190 1400" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="364" y="977" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 870 650 Q 530 650 530 1025 T 190 1400" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="534" y="1021" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 530 562 Q 700 562 700 975.5 T 870 1389" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="704" y="971.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g>
+<g class="rel">
+    <path d="M 870 650 Q 870 650 870 1019.5 T 870 1389" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+    <text x="874" y="1015.5" font-size="9" fill="#475569" font-weight="600" font-family="Segoe UI, sans-serif">1:N</text>
+  </g></g>
+  <g id="entities"><g id="entity-Verification" transform="translate(40,40)">
+<rect width="300" height="174" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Verification</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">verification</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">identifier</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">value</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">expiresAt</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+</g>
+<g id="entity-Session" transform="translate(340,40)">
+<rect width="300" height="218" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Session</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">session</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">expiresAt</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">token</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">ipAddress</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">userAgent</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="210" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="8" y="225" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="225" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">userId</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ User</text>
+</g>
+<g id="entity-User" transform="translate(680,40)">
+<rect width="300" height="306" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">User</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">user</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">name</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">email</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">emailVerified</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">role</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">Role</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default PATIENT</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">status</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">UserStatus</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default ACTIVE</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">needPasswordChange</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">isDeleted</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">deletedAt</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="254" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="42" y="269" font-size="11" fill="#1e293b" font-family="Consolas, monospace">image</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="269" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="276" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="276" x2="300" y2="276" stroke="#e2e8f0"/>
+<text x="42" y="291" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="291" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="298" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="298" x2="300" y2="298" stroke="#e2e8f0"/>
+<text x="42" y="313" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="313" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+</g>
+<g id="entity-Account" transform="translate(1040,40)">
+<rect width="300" height="328" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Account</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">account</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">accountId</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">providerId</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="122" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="8" y="137" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="137" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">userId</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ User</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">accessToken</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">refreshToken</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">idToken</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">accessTokenExpiresAt</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">refreshTokenExpiresAt</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="254" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="42" y="269" font-size="11" fill="#1e293b" font-family="Consolas, monospace">scope</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="269" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="276" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="276" x2="300" y2="276" stroke="#e2e8f0"/>
+<text x="42" y="291" font-size="11" fill="#1e293b" font-family="Consolas, monospace">password</text>
+<text x="158" y="291" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="291" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="298" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="298" x2="300" y2="298" stroke="#e2e8f0"/>
+<text x="42" y="313" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="313" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="320" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="320" x2="300" y2="320" stroke="#e2e8f0"/>
+<text x="42" y="335" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="335" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+</g>
+<g id="entity-Admin" transform="translate(40,420)">
+<rect width="300" height="262" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Admin</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">admins</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">name</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">email</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">profilePhoto</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">contactNumber</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">isDeleted</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">deletedAt</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="254" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="8" y="269" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="269" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">userId</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="269" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → User</text>
+</g>
+<g id="entity-Patient" transform="translate(380,420)">
+<rect width="300" height="284" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Patient</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">patient</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">name</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">email</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">profilePhoto</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">contactNumber</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">address</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">isDeleted</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">deletedAt</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="254" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="42" y="269" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="276" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="276" x2="300" y2="276" stroke="#e2e8f0"/>
+<text x="8" y="291" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="291" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">userId</text>
+<text x="158" y="291" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="291" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → User</text>
+</g>
+<g id="entity-Doctor" transform="translate(720,420)">
+<rect width="300" height="460" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Doctor</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">doctor</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">name</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">email</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">profilePhoto</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">contactNumber</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">address</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">isDeleted</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">deletedAt</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">registrationNumber</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="254" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="42" y="269" font-size="11" fill="#1e293b" font-family="Consolas, monospace">experience</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">Int</text>
+<text x="246" y="269" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default 0</text>
+<rect y="276" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="276" x2="300" y2="276" stroke="#e2e8f0"/>
+<text x="42" y="291" font-size="11" fill="#1e293b" font-family="Consolas, monospace">gender</text>
+<text x="158" y="291" font-size="10" fill="#64748b" font-family="Consolas, monospace">Gender</text>
+<rect y="298" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="298" x2="300" y2="298" stroke="#e2e8f0"/>
+<text x="42" y="313" font-size="11" fill="#1e293b" font-family="Consolas, monospace">appointmentFee</text>
+<text x="158" y="313" font-size="10" fill="#64748b" font-family="Consolas, monospace">Float</text>
+<rect y="320" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="320" x2="300" y2="320" stroke="#e2e8f0"/>
+<text x="42" y="335" font-size="11" fill="#1e293b" font-family="Consolas, monospace">qualification</text>
+<text x="158" y="335" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="342" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="342" x2="300" y2="342" stroke="#e2e8f0"/>
+<text x="42" y="357" font-size="11" fill="#1e293b" font-family="Consolas, monospace">currentWorkingPlace</text>
+<text x="158" y="357" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="364" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="364" x2="300" y2="364" stroke="#e2e8f0"/>
+<text x="42" y="379" font-size="11" fill="#1e293b" font-family="Consolas, monospace">designation</text>
+<text x="158" y="379" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="386" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="386" x2="300" y2="386" stroke="#e2e8f0"/>
+<text x="42" y="401" font-size="11" fill="#1e293b" font-family="Consolas, monospace">averageRating</text>
+<text x="158" y="401" font-size="10" fill="#64748b" font-family="Consolas, monospace">Float</text>
+<text x="246" y="401" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default 0.0</text>
+<rect y="408" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="408" x2="300" y2="408" stroke="#e2e8f0"/>
+<text x="42" y="423" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="423" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="430" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="430" x2="300" y2="430" stroke="#e2e8f0"/>
+<text x="42" y="445" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="445" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="452" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="452" x2="300" y2="452" stroke="#e2e8f0"/>
+<text x="8" y="467" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="467" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">userId</text>
+<text x="158" y="467" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="467" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → User</text>
+</g>
+<g id="entity-Speciality" transform="translate(1120,420)">
+<rect width="300" height="218" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Speciality</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">specialties</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">title</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="93" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique VarChar(100)</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">description</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">Text nullable</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">icon</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">isDeleted</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">deletedAt</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime?</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+</g>
+<g id="entity-DoctorSpeciality" transform="translate(1120,720)">
+<rect width="300" height="108" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">DoctorSpeciality</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">doctor_specialities</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="8" y="93" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="93" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">doctorId</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="93" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Doctor</text>
+<rect y="100" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="8" y="115" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="115" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">specialtyId</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Speciality</text>
+</g>
+<g id="entity-Schedule" transform="translate(40,900)">
+<rect width="300" height="152" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Schedule</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">schedules</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">startDateTime</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">endDateTime</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+</g>
+<g id="entity-DoctorSchedules" transform="translate(340,900)">
+<rect width="300" height="152" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">DoctorSchedules</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">doctor_schedules</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">doctorId</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">composite PK</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="8" y="93" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="93" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">scheduleId</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="93" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">composite PK</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">isBooked</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+</g>
+<g id="entity-Appointment" transform="translate(640,900)">
+<rect width="300" height="240" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Appointment</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">appointments</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">videoCallingId</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">Uuid</text>
+<text x="246" y="93" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">status</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">AppointmentStatus</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default SCHEDULED</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">paymentStatus</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">PaymentStatus</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default UNPAID</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="188" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="8" y="203" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="203" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">patientId</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Patient</text>
+<rect y="210" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="8" y="225" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="225" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">doctorId</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Doctor</text>
+<rect y="232" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="8" y="247" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="247" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">scheduleId</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Schedule</text>
+</g>
+<g id="entity-Prescription" transform="translate(40,1280)">
+<rect width="300" height="240" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Prescription</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">prescriptions</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">followUpDate</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">instructions</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">Text</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">pdfUrl</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="188" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="8" y="203" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="203" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">appointmentId</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → Appointment</text>
+<rect y="210" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="8" y="225" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="225" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">patientId</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Patient</text>
+<rect y="232" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="8" y="247" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="247" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">doctorId</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Doctor</text>
+</g>
+<g id="entity-Payment" transform="translate(380,1280)">
+<rect width="300" height="262" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Payment</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">payments</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">amount</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">Float</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">transactionId</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">Uuid</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">stripeEventId</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="137" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique nullable</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">status</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">PaymentStatus</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default UNPAID</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">invoiceUrl</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">paymentGatewayData</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">Json?</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="254" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="8" y="269" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="269" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">appointmentId</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="269" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → Appointment</text>
+</g>
+<g id="entity-Review" transform="translate(720,1280)">
+<rect width="300" height="218" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">Review</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">reviews</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">rating</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">Float</text>
+<text x="246" y="93" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default 0.0</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">comment</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="115" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">Text nullable</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="8" y="181" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="181" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">appointmentId</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → Appointment</text>
+<rect y="188" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="8" y="203" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="203" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">patientId</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="203" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Patient</text>
+<rect y="210" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="8" y="225" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="225" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">doctorId</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="225" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Doctor</text>
+</g>
+<g id="entity-MedicalReport" transform="translate(1060,1280)">
+<rect width="300" height="174" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">MedicalReport</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">medical_reports</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">reportName</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">reportLink</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="166" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="8" y="181" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="181" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">patientId</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">→ Patient</text>
+</g>
+<g id="entity-PatientHealthData" transform="translate(380,1620)">
+<rect width="300" height="482" rx="4" fill="#fff" stroke="#1a1a2e" stroke-width="1.5" filter="url(#cardShadow)"/>
+<rect width="300" height="34" rx="4" fill="#1e3a5f"/>
+<rect y="26" width="300" height="8" fill="#1e3a5f"/>
+<text x="150" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Segoe UI, system-ui, sans-serif">PatientHealthData</text>
+<text x="292" y="22" text-anchor="end" font-size="9" fill="#93c5fd" font-family="monospace">patient_health_data</text>
+<line x1="0" y1="34" x2="300" y2="34" stroke="#cbd5e1"/>
+<rect y="34" width="300" height="22" fill="#f1f5f9"/>
+<text x="4" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Key</text>
+<text x="40" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Field</text>
+<text x="158" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Type</text>
+<text x="246" y="49" font-size="10" font-weight="600" fill="#475569" font-family="Segoe UI, system-ui, sans-serif">Constraint</text>
+<rect y="56" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="56" x2="300" y2="56" stroke="#e2e8f0"/>
+<text x="8" y="71" font-size="10" font-weight="700" fill="#b45309" font-family="Segoe UI, sans-serif">PK</text>
+<text x="42" y="71" font-size="11" font-weight="600" fill="#1e40af" font-family="Consolas, monospace">id</text>
+<text x="158" y="71" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="71" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">uuid(7)</text>
+<rect y="78" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="78" x2="300" y2="78" stroke="#e2e8f0"/>
+<text x="42" y="93" font-size="11" fill="#1e293b" font-family="Consolas, monospace">gender</text>
+<text x="158" y="93" font-size="10" fill="#64748b" font-family="Consolas, monospace">Gender</text>
+<rect y="100" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="100" x2="300" y2="100" stroke="#e2e8f0"/>
+<text x="42" y="115" font-size="11" fill="#1e293b" font-family="Consolas, monospace">dateOfBirth</text>
+<text x="158" y="115" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="122" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="122" x2="300" y2="122" stroke="#e2e8f0"/>
+<text x="42" y="137" font-size="11" fill="#1e293b" font-family="Consolas, monospace">bloodGroup</text>
+<text x="158" y="137" font-size="10" fill="#64748b" font-family="Consolas, monospace">BloodGroup</text>
+<rect y="144" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="144" x2="300" y2="144" stroke="#e2e8f0"/>
+<text x="42" y="159" font-size="11" fill="#1e293b" font-family="Consolas, monospace">hasAllergies</text>
+<text x="158" y="159" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="159" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="166" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="166" x2="300" y2="166" stroke="#e2e8f0"/>
+<text x="42" y="181" font-size="11" fill="#1e293b" font-family="Consolas, monospace">hasDiabetes</text>
+<text x="158" y="181" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="181" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="188" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="188" x2="300" y2="188" stroke="#e2e8f0"/>
+<text x="42" y="203" font-size="11" fill="#1e293b" font-family="Consolas, monospace">height</text>
+<text x="158" y="203" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="210" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="210" x2="300" y2="210" stroke="#e2e8f0"/>
+<text x="42" y="225" font-size="11" fill="#1e293b" font-family="Consolas, monospace">weight</text>
+<text x="158" y="225" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<rect y="232" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="232" x2="300" y2="232" stroke="#e2e8f0"/>
+<text x="42" y="247" font-size="11" fill="#1e293b" font-family="Consolas, monospace">smokingStatus</text>
+<text x="158" y="247" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="247" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="254" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="254" x2="300" y2="254" stroke="#e2e8f0"/>
+<text x="42" y="269" font-size="11" fill="#1e293b" font-family="Consolas, monospace">dietaryPreferences</text>
+<text x="158" y="269" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="269" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="276" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="276" x2="300" y2="276" stroke="#e2e8f0"/>
+<text x="42" y="291" font-size="11" fill="#1e293b" font-family="Consolas, monospace">pregnancyStatus</text>
+<text x="158" y="291" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="291" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="298" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="298" x2="300" y2="298" stroke="#e2e8f0"/>
+<text x="42" y="313" font-size="11" fill="#1e293b" font-family="Consolas, monospace">mentalHealthHistory</text>
+<text x="158" y="313" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="313" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="320" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="320" x2="300" y2="320" stroke="#e2e8f0"/>
+<text x="42" y="335" font-size="11" fill="#1e293b" font-family="Consolas, monospace">immunizationStatus</text>
+<text x="158" y="335" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="335" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="342" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="342" x2="300" y2="342" stroke="#e2e8f0"/>
+<text x="42" y="357" font-size="11" fill="#1e293b" font-family="Consolas, monospace">hasPastSurgeries</text>
+<text x="158" y="357" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="357" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="364" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="364" x2="300" y2="364" stroke="#e2e8f0"/>
+<text x="42" y="379" font-size="11" fill="#1e293b" font-family="Consolas, monospace">recentAnxiety</text>
+<text x="158" y="379" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="379" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="386" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="386" x2="300" y2="386" stroke="#e2e8f0"/>
+<text x="42" y="401" font-size="11" fill="#1e293b" font-family="Consolas, monospace">recentDepression</text>
+<text x="158" y="401" font-size="10" fill="#64748b" font-family="Consolas, monospace">Boolean</text>
+<text x="246" y="401" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">default false</text>
+<rect y="408" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="408" x2="300" y2="408" stroke="#e2e8f0"/>
+<text x="42" y="423" font-size="11" fill="#1e293b" font-family="Consolas, monospace">maritalStatus</text>
+<text x="158" y="423" font-size="10" fill="#64748b" font-family="Consolas, monospace">String?</text>
+<text x="246" y="423" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">nullable</text>
+<rect y="430" width="300" height="22" fill="#f8fafc"/>
+<line x1="0" y1="430" x2="300" y2="430" stroke="#e2e8f0"/>
+<text x="42" y="445" font-size="11" fill="#1e293b" font-family="Consolas, monospace">createdAt</text>
+<text x="158" y="445" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="452" width="300" height="22" fill="#ffffff"/>
+<line x1="0" y1="452" x2="300" y2="452" stroke="#e2e8f0"/>
+<text x="42" y="467" font-size="11" fill="#1e293b" font-family="Consolas, monospace">updatedAt</text>
+<text x="158" y="467" font-size="10" fill="#64748b" font-family="Consolas, monospace">DateTime</text>
+<rect y="474" width="300" height="22" fill="#fff7ed"/>
+<line x1="0" y1="474" x2="300" y2="474" stroke="#e2e8f0"/>
+<text x="8" y="489" font-size="10" font-weight="700" fill="#c2410c" font-family="Segoe UI, sans-serif">FK</text>
+<text x="42" y="489" font-size="11" font-weight="600" fill="#9a3412" font-family="Consolas, monospace">patientId</text>
+<text x="158" y="489" font-size="10" fill="#64748b" font-family="Consolas, monospace">String</text>
+<text x="246" y="489" font-size="9" fill="#94a3b8" font-family="Segoe UI, sans-serif">unique → Patient</text>
+</g></g>
+  
+<g transform="translate(1060, 1620)">
+  <rect width="360" height="320" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" filter="url(#cardShadow)"/>
+  <rect width="360" height="32" rx="6" fill="#334155"/>
+  <rect y="24" width="360" height="8" fill="#334155"/>
+  <text x="180" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Segoe UI, sans-serif">Enums</text>
+  <text x="12" y="52" font-size="11" font-weight="700" fill="#0f172a" font-family="Segoe UI, sans-serif">Role</text>
+  <text x="12" y="68" font-size="10" fill="#475569" font-family="monospace">SUPER_ADMIN | ADMIN | DOCTOR | PATIENT</text>
+  <text x="12" y="92" font-size="11" font-weight="700" fill="#0f172a" font-family="Segoe UI, sans-serif">UserStatus</text>
+  <text x="12" y="108" font-size="10" fill="#475569" font-family="monospace">BLOCKED | DELETED | ACTIVE</text>
+  <text x="12" y="132" font-size="11" font-weight="700" fill="#0f172a" font-family="Segoe UI, sans-serif">Gender</text>
+  <text x="12" y="148" font-size="10" fill="#475569" font-family="monospace">MALE | FEMALE</text>
+  <text x="12" y="172" font-size="11" font-weight="700" fill="#0f172a" font-family="Segoe UI, sans-serif">BloodGroup</text>
+  <text x="12" y="188" font-size="10" fill="#475569" font-family="monospace">A± B± AB± O± (8 values)</text>
+  <text x="12" y="212" font-size="11" font-weight="700" fill="#0f172a" font-family="Segoe UI, sans-serif">AppointmentStatus</text>
+  <text x="12" y="228" font-size="10" fill="#475569" font-family="monospace">SCHEDULED | INPROGRESS | COMPLETED | CANCELED</text>
+  <text x="12" y="252" font-size="11" font-weight="700" fill="#0f172a" font-family="Segoe UI, sans-serif">PaymentStatus</text>
+  <text x="12" y="268" font-size="10" fill="#475569" font-family="monospace">PAID | UNPAID</text>
+  <line x1="12" y1="284" x2="348" y2="284" stroke="#e2e8f0"/>
+  <text x="12" y="304" font-size="10" fill="#64748b" font-family="Segoe UI, sans-serif">Generated from prisma/schema/*.prisma</text>
+</g>
+</svg>
