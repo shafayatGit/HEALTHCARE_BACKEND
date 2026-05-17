@@ -38,7 +38,7 @@ export const doctorSelect = {
       deletedAt: true,
     },
   },
-  doctorSpecialities: {
+  specilities: {
     select: {
       speciality: {
         select: {
@@ -57,7 +57,7 @@ const createDoctor = async (payload: ICreaeteDoctorPayload) => {
   for (const specialityId of payload.specialities) {
     const speciality = await prisma.speciality.findUnique({
       where: {
-        title: specialityId,
+        id: specialityId,
       },
     });
     if (!speciality) {
@@ -103,7 +103,7 @@ const createDoctor = async (payload: ICreaeteDoctorPayload) => {
       const doctorSpecialityData = specialities.map((speciality) => {
         return {
           doctorId: doctorData.id,
-          specialityId: speciality.id,
+          specialtyId: speciality.id,
         };
       });
 
@@ -115,7 +115,52 @@ const createDoctor = async (payload: ICreaeteDoctorPayload) => {
         where: {
           id: doctorData.id,
         },
-        select: doctorSelect,
+        select: {
+          id: true,
+          userId: true,
+          name: true,
+          email: true,
+          profilePhoto: true,
+          contactNumber: true,
+          address: true,
+          registrationNumber: true,
+          experience: true,
+          gender: true,
+          appointmentFee: true,
+          qualification: true,
+          currentWorkingPlace: true,
+          designation: true,
+          averageRating: true,
+          createdAt: true,
+          updatedAt: true,
+          user: {
+            select: {
+              id: true,
+              email: true,
+              name: true,
+              image: true,
+              role: true,
+              status: true,
+              emailVerified: true,
+              createdAt: true,
+              updatedAt: true,
+              isDeleted: true,
+              deletedAt: true,
+            },
+          },
+          specialties: {
+            select: {
+              specialty: {
+                select: {
+                  id: true,
+                  title: true,
+                  description: true,
+                  icon: true,
+                },
+              },
+            },
+          },
+        },
       });
       return doctor;
     });

@@ -14,7 +14,6 @@ router.post(
   validateRequest(createDoctorValidationSchema),
   userController.createDoctor,
 );
-router.post("/create-admin", userController.createAdmin);
 // router.get("/doctor/:id", userController.getDoctor);
 
 export const userRoutes = router;
