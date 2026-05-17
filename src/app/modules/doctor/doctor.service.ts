@@ -130,6 +130,8 @@ const softDeleteDoctor = async (id: string) => {
       where: { doctorId: id },
     });
   });
+
+  return { message: "Doctor deleted successfully" };
 };
 export const doctorService = {
   getAllDoctors,
