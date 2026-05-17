@@ -9,7 +9,7 @@ const getAllAdmin = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, {
     httpStatusCode: status.OK,
     success: true,
-    message: "All Admin Data Retrieved",
+    message: "All Admin Data Retrieved.",
     data: result,
   });
 });
