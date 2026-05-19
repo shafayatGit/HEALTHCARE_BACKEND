@@ -165,6 +165,36 @@ const logOutUser = catchAsync(async (req: Request, res: Response) => {
     data: result,
   });
 });
+
+const googleLogin = catchAsync(async (req: Request, res: Response) => {
+  const result = await AuthService.googleLogin();
+  sendResponse(res, {
+    httpStatusCode: status.OK,
+    success: true,
+    message: "Google login successful",
+    data: result,
+  });
+});
+
+const googleLoginSuccess = catchAsync(async (req: Request, res: Response) => {
+  const result = await AuthService.googleLoginSuccess();
+  sendResponse(res, {
+    httpStatusCode: status.OK,
+    success: true,
+    message: "Google login successful",
+    data: result,
+  });
+});
+
+const handleOAuthError = catchAsync(async (req: Request, res: Response) => {
+  const result = await AuthService.handleOAuthError();
+  sendResponse(res, {
+    httpStatusCode: status.OK,
+    success: true,
+    message: "OAuth error handled",
+    data: result,
+  });
+});
 export const AuthController = {
   registerPatient,
   loginUser,
@@ -175,4 +205,7 @@ export const AuthController = {
   forgetPassword,
   resetPassword,
   logOutUser,
+  googleLogin,
+  googleLoginSuccess,
+  handleOAuthError,
 };

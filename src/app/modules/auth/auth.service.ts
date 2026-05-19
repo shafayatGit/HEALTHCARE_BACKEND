@@ -239,6 +239,17 @@ const changePassword = async (
     }),
   });
 
+  if (session.user.needPasswordChange) {
+    await prisma.user.update({
+      where: {
+        id: session.user.id,
+      },
+      data: {
+        needPasswordChange: false,
+      },
+    });
+  }
+
   const accessToken = tokenUtils.getAccessToken({
     userId: session.user.id,
     role: session.user.role,
@@ -324,6 +335,17 @@ const resetPassword = async (
     },
   });
 
+  if (isUserExist.needPasswordChange) {
+    await prisma.user.update({
+      where: {
+        id: isUserExist.id,
+      },
+      data: {
+        needPasswordChange: false,
+      },
+    });
+  }
+
   await prisma.session.deleteMany({
     where: {
       userId: isUserExist.id,
@@ -340,6 +362,9 @@ const logOutUser = async (sessionToken: string) => {
   });
   return result;
 };
+
+const googleLoginSuccess = async () => {};
+
 export const AuthService = {
   registerPatient,
   loginUser,
@@ -350,4 +375,5 @@ export const AuthService = {
   forgetPassword,
   resetPassword,
   logOutUser,
+  googleLoginSuccess,
 };
