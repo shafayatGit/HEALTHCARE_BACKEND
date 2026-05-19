@@ -110,6 +110,16 @@ const changePassword = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const verifyEmail = catchAsync(async (req: Request, res: Response) => {
+  const { email, otp } = req.body;
+  const result = await AuthService.verifyEmail(email, otp);
+  sendResponse(res, {
+    httpStatusCode: status.OK,
+    success: true,
+    message: "Email verified successfully",
+  });
+});
+
 const logOutUser = catchAsync(async (req: Request, res: Response) => {
   const sessionToken = req.cookies["better-auth.session_token"];
   const result = await AuthService.logOutUser(sessionToken);
@@ -141,5 +151,6 @@ export const AuthController = {
   getMe,
   getNewToken,
   changePassword,
+  verifyEmail,
   logOutUser,
 };

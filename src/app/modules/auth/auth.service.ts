@@ -31,8 +31,8 @@ const registerPatient = async (payload: IRegisterPatient) => {
       return await tx.patient.create({
         data: {
           userId: data.user.id,
-          name: payload.name,
-          email: payload.email,
+          name: data.user.name,
+          email: data.user.email,
         },
       });
     } catch (error: any) {
@@ -265,6 +265,26 @@ const changePassword = async (
   };
 };
 
+const verifyEmail = async (email: string, otp: string) => {
+  const result = await auth.api.verifyEmailOTP({
+    body: {
+      email,
+      otp,
+    },
+  });
+  if (result.status && !result.user.emailVerified) {
+    await prisma.user.update({
+      where: {
+        email: result.user.email,
+      },
+      data: {
+        emailVerified: true,
+      },
+    });
+  }
+  return result;
+};
+
 const logOutUser = async (sessionToken: string) => {
   const result = await auth.api.signOut({
     headers: new Headers({
@@ -279,5 +299,6 @@ export const AuthService = {
   getMe,
   getNewToken,
   changePassword,
+  verifyEmail,
   logOutUser,
 };

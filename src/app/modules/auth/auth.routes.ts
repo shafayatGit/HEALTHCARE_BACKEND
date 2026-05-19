@@ -28,4 +28,6 @@ router.post(
   checkAuth(Role.ADMIN, Role.DOCTOR, Role.PATIENT),
   AuthController.logOutUser,
 );
+
+router.post("/verify-email", AuthController.verifyEmail);
 export const AuthRoutes = router;
