@@ -3,7 +3,7 @@ import AppError from "../../errorHelpers/AppError";
 import { prisma } from "../../lib/prisma";
 import { IUpdateDoctorPayload } from "./doctor.interface";
 import { UserStatus } from "../../../generated/prisma/enums";
-import { IQueryParams } from "../../interfaces/query.interface";
+// import { IQueryParams } from "../../interfaces/query.interface";
 import { QueryBuilder } from "../../utils/quaryBuilder";
 import {
   doctorFilterableFields,
@@ -12,46 +12,21 @@ import {
 } from "./doctor.constant";
 import { Doctor, Prisma } from "../../../generated/prisma/client";
 
-const getAllDoctors = async (query: IQueryParams) => {
-  // const doctors = await prisma.doctor.findMany({
-  //   // where: {
-  //   //   isDeleted: false,
-  //   // },
-  //   // include: {
-  //   //   user: true,
-  //   //   specialties: true,
-  //   // },
+type IQueryParams = {
+  page?: string;
+  limit?: string;
+  sortBy?: string;
+  sortOrder?: string;
+  search?: string;
+  filter?: string;
 
-  // });
-  const queryBuilder = new QueryBuilder<
-    Doctor,
-    Prisma.DoctorWhereInput,
-    Prisma.DoctorInclude
-  >(prisma.doctor, query, {
-    searchableFields: doctorSearchableFields,
-    filterableFields: doctorFilterableFields,
-  });
-  const result = await queryBuilder
-    .search()
-    .filter()
-    .where({
-      isDeleted: false,
-    })
-    .include({
-      user: true,
-      specialties: {
-        include: {
-          specialty: true,
-        },
-      },
-    })
-    .dynamicInclude(doctorIncludeConfig)
-    .paginate()
-    .sort()
-    .fields()
-    .execute();
+  //filterableFields
+  gender?: string;
+  experience?: string;
+  appointmentFee?: string;
+  specialties?: string;
 
-  return result;
+  [key: string]: unknown; //this is for unknown type
 };
 
 const getDoctorById = async (id: string) => {
@@ -169,6 +144,95 @@ const softDeleteDoctor = async (id: string) => {
   });
 
   return { message: "Doctor deleted successfully" };
+};
+
+//for query builder practice
+const getAllDoctors = async (query: IQueryParams) => {
+  //Step->1: pagination
+  const page = Number(query.page) || 1;
+  const limit = Number(query.limit) || 10;
+  const skip = (page - 1) * limit;
+
+  //Step->2: sorting
+  const sortBy = query.sortBy || "createdAt";
+  const sortOrder = query.sortOrder === "asc" ? "asc" : "desc";
+
+  let orderBy: Record<string, unknown> = {};
+
+  if (sortBy.includes(".")) {
+    //nested object
+    const [relation, field] = sortBy.split(".");
+    orderBy = {
+      [relation]: {
+        [field]: sortOrder,
+      },
+    };
+  } else {
+    orderBy = {
+      [sortBy]: sortOrder,
+    };
+  }
+
+  //Step->3: searching
+
+  const searchCondition: Prisma.DoctorWhereInput[] = [];
+  if (query.searchTerm) {
+    const searchTerm = query.searchTerm;
+    const searchableFields = ["name", "designation"];
+    //if we dont take searchable fields array
+    // searchCondition.push({
+    //   //Searchable Fields
+    //   //we will give here those fields which we want to search
+    //   name: {
+    //     contains: searchTerm as string,
+    //     mode: "insensitive",
+    //   },
+    //   designation: {
+    //     contains: searchTerm as string,
+    //     mode: "insensitive",
+    //   },
+    // });
+
+    searchableFields.forEach((feild) => {
+      searchCondition.push({
+        [feild]: {
+          contains: searchTerm as string,
+          mode: "insensitive",
+        },
+      });
+    });
+  }
+
+  const result = await prisma.doctor.findMany({
+    where: {
+      OR: searchCondition.length > 0 ? searchCondition : undefined,
+    },
+    skip,
+    take: limit,
+    //-> 1 Layer
+    // orderBy: {
+    //   "name": "desc",
+    //   [sortBy]: sortOrder, //dynamic sorting
+    // },
+    //`-> 2 Layer
+    // orderBy: {
+    //   user: {
+    //     // name:"asc"
+    //     [sortBy]: sortOrder, //dynamic sorting with nested field exmple user.name => orderBy: { user: { name: 'asc' } }
+    //   },
+    // },
+    orderBy,
+  });
+
+  return {
+    data: result,
+    meta: {
+      page,
+      limit,
+      total: result.length,
+      totalPages: Math.ceil(result.length / limit),
+    },
+  };
 };
 export const doctorService = {
   getAllDoctors,
