@@ -10,7 +10,7 @@ const router = Router();
 
 router.post(
   "/create-doctor",
-  checkAuth(Role.ADMIN, Role.SUPER_ADMIN),
+  // checkAuth(Role.ADMIN, Role.SUPER_ADMIN),
   validateRequest(createDoctorValidationSchema),
   userController.createDoctor,
 );

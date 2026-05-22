@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 export interface PrismaFindManyArgs {
   where?: Record<string, unknown>;
   include?: Record<string, unknown>;
-  select?: Record<string, Boolean | Record<string, unknown>>;
-  orderBy: Record<string, unknown> | Record<string, unknown>[];
+  select?: Record<string, boolean | Record<string, unknown>>;
+  orderBy?: Record<string, unknown> | Record<string, unknown>[];
   skip?: number;
   take?: number;
   cursor?: Record<string, unknown>;
@@ -13,7 +15,7 @@ export interface PrismaFindManyArgs {
 export interface PrismaCountArgs {
   where?: Record<string, unknown>;
   include?: Record<string, unknown>;
-  select?: Record<string, Boolean | Record<string, unknown>>;
+  select?: Record<string, boolean | Record<string, unknown>>;
   orderBy?: Record<string, unknown> | Record<string, unknown>[];
   skip?: number;
   take?: number;
@@ -23,19 +25,19 @@ export interface PrismaCountArgs {
 }
 
 export interface PrismaModelDelegate {
-  findMany: (args?: any) => Promise<any[]>;
-  count: (args?: any) => Promise<number>;
+  findMany(args?: any): Promise<any[]>;
+  count(args?: any): Promise<number>;
 }
 
 export interface IQueryParams {
-  searchterm?: string;
+  searchTerm?: string;
   page?: string;
   limit?: string;
   sortBy?: string;
   sortOrder?: "asc" | "desc";
   fields?: string;
   includes?: string;
-  [key: string]: string | unknown;
+  [key: string]: string | undefined;
 }
 
 export interface IQueryConfig {
@@ -58,13 +60,6 @@ export interface PrismaStringFilter {
   not?: PrismaStringFilter | string;
 }
 
-export interface PrismaWhereCondition {
-  OR?: Record<string, unknown>[];
-  AND?: Record<string, unknown>[];
-  NOT?: Record<string, unknown>[];
-  [key: string]: unknown;
-}
-
 export interface PrismaNumberFilter {
   equals?: number;
   in?: number[];
@@ -74,4 +69,21 @@ export interface PrismaNumberFilter {
   gt?: number;
   gte?: number;
   not?: PrismaNumberFilter | number;
+}
+
+export interface PrismaWhereConditions {
+  OR?: Record<string, unknown>[];
+  AND?: Record<string, unknown>[];
+  NOT?: Record<string, unknown>[];
+  [key: string]: unknown;
+}
+
+export interface IQueryResult<T> {
+  data: T[];
+  meta: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
 }

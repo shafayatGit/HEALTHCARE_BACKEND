@@ -17,7 +17,7 @@ router.post(
 );
 router.get(
   "/",
-  checkAuth(Role.ADMIN, Role.SUPER_ADMIN, Role.DOCTOR, Role.PATIENT),
+  // checkAuth(Role.ADMIN, Role.SUPER_ADMIN, Role.DOCTOR, Role.PATIENT),
   specialityController.getAllSpecialities,
 );
 router.delete("/:id", specialityController.deleteSpeciality);

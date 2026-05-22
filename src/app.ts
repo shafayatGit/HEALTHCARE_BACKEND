@@ -7,8 +7,10 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
 import { envVars } from "./app/config/env";
+import qs from "qs";
 
 const app: Application = express();
+app.set("query parser", (str: string) => qs.parse(str));
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(process.cwd(), `src/app/templates`));
