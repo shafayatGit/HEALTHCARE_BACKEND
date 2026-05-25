@@ -8,6 +8,7 @@ import { IQueryParams } from "../../interfaces/query.interface";
 const createSchedule = () =>
   catchAsync(async (req: Request, res: Response) => {
     const payload = req.body;
+    // console.log({ payload });
     const result = await ScheduleServices.createSchedule(payload);
 
     sendResponse(res, {

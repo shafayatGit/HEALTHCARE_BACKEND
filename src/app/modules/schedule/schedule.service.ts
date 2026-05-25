@@ -1,9 +1,9 @@
-import { addHours, addMinutes, format } from "date-fns";
+import { addHours, addMinutes, format, parse } from "date-fns";
 import {
   ICreateSchedulePayload,
   IUpdateSchedulePayload,
 } from "./schedule.interface";
-import { convertDateTime } from "./schedule.utis";
+import { convertDateTime } from "./schedule.utils";
 import { prisma } from "../../lib/prisma";
 import { IQueryParams } from "../../interfaces/query.interface";
 import { QueryBuilder } from "../../utils/quaryBuilder";
@@ -18,49 +18,38 @@ const createSchedule = async (payload: ICreateSchedulePayload) => {
   const { startDate, endDate, startTime, endTime } = payload;
 
   const interval = 30;
-  const currentDate = new Date(startDate); //today
+
+  const currentDate = new Date(startDate);
   const lastDate = new Date(endDate);
+
   const schedules = [];
 
   while (currentDate <= lastDate) {
-    const startDateTime = new Date( //!need date-fns package
-      addMinutes(
-        addHours(
-          `${format(currentDate, "yyyy-MM-dd")} ,
-        `,
-          Number(startTime.split(":")[0]),
-        ),
-        Number(startTime.split(":")[1]),
+    const dateString = format(currentDate, "yyyy-MM-dd");
+
+    const startDateTime = addMinutes(
+      addHours(
+        parse(dateString, "yyyy-MM-dd", new Date()),
+        Number(startTime.split(":")[0]),
       ),
+      Number(startTime.split(":")[1]),
     );
 
-    const endDateTime = new Date(
-      addMinutes(
-        addHours(
-          `${format(currentDate, "yyyy-MM-dd")} ,
-        `,
-          Number(endTime.split(":")[0]),
-        ),
-        Number(endTime.split(":")[1]),
+    const endDateTime = addMinutes(
+      addHours(
+        parse(dateString, "yyyy-MM-dd", new Date()),
+        Number(endTime.split(":")[0]),
       ),
+      Number(endTime.split(":")[1]),
     );
 
-    //?Example
-    // startTime = "09:00" → split(":") → ["09", "00"]
-    // Builds: 2026-05-23 + 9 hours + 0 minutes = 2026-05-23 09:00
+    let currentSlot = new Date(startDateTime);
 
-    // const startDateTime = new Date(
-    //   addMinutes(addHours("2026-05-23", 9), 0)
-    // ); // → 09:00
-
-    // const endDateTime = new Date(
-    //   addMinutes(addHours("2026-05-23", 10), 0)
-    // ); // → 10:00
-
-    while (startDateTime < endDateTime) {
-      const s = convertDateTime(startDateTime);
-
-      const e = convertDateTime(addMinutes(startDateTime, interval));
+    while (currentSlot < endDateTime) {
+      const s = await convertDateTime(new Date(currentSlot));
+      const e = await convertDateTime(
+        addMinutes(new Date(currentSlot), interval),
+      );
 
       const scheduleData = {
         startDateTime: s,
@@ -78,9 +67,11 @@ const createSchedule = async (payload: ICreateSchedulePayload) => {
         const result = await prisma.schedule.create({
           data: scheduleData,
         });
+        console.log(result);
         schedules.push(result);
       }
-      startDateTime.setMinutes(startDateTime.getMinutes() + interval);
+
+      currentSlot = addMinutes(currentSlot, interval);
     }
 
     currentDate.setDate(currentDate.getDate() + 1);
@@ -123,26 +114,24 @@ const getScheduleById = async (id: string) => {
 
 const updateSchedule = async (id: string, payload: IUpdateSchedulePayload) => {
   const { startDate, endDate, startTime, endTime } = payload;
-  const startDateTime = new Date(
-    addMinutes(
-      addHours(
-        `${format(startDate, "yyyy-MM-dd")} ,
-        `,
-        Number(startTime.split(":")[0]),
-      ),
-      Number(startTime.split(":")[1]),
+
+  const startDateString = format(new Date(startDate), "yyyy-MM-dd");
+  const endDateString = format(new Date(endDate), "yyyy-MM-dd");
+
+  const startDateTime = addMinutes(
+    addHours(
+      parse(startDateString, "yyyy-MM-dd", new Date()),
+      Number(startTime.split(":")[0]),
     ),
+    Number(startTime.split(":")[1]),
   );
 
-  const endDateTime = new Date(
-    addMinutes(
-      addHours(
-        `${format(endDate, "yyyy-MM-dd")} ,
-        `,
-        Number(endTime.split(":")[0]),
-      ),
-      Number(endTime.split(":")[1]),
+  const endDateTime = addMinutes(
+    addHours(
+      parse(endDateString, "yyyy-MM-dd", new Date()),
+      Number(endTime.split(":")[0]),
     ),
+    Number(endTime.split(":")[1]),
   );
 
   return await prisma.schedule.update({
@@ -164,6 +153,7 @@ const deleteSchedule = async (id: string) => {
   });
   return result;
 };
+
 export const ScheduleServices = {
   createSchedule,
   getAllSchedules,
