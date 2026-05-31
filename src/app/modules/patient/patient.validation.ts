@@ -1,110 +1,107 @@
 import z from "zod";
 import { BloodGroup, Gender } from "../../../generated/prisma/enums";
 
-const updatePatientProfileZodSchema = {
-  patientInfo: z.object({
-    patientInfo: z
-      .object({
-        name: z
-          .string("Name must be string")
-          .min(1, "Name is required")
-          .max(100, "Name must be less than 100 characters")
-          .optional(),
-        profilePhoto: z.string("Profile photo must be string").optional(),
-        contactNumber: z
-          .string("Contact number must be string")
-          .min(1, "Contact number is required")
-          .max(20, "Contact number must be less than 20 characters")
-          .optional(),
-        address: z
-          .string("Address must be string")
-          .min(1, "Address is required")
-          .max(200, "Address must be less than 200 characters")
-          .optional(),
-      })
-      .optional(),
-    patientHealthData: z
-      .object({
-        gender: z
-          .enum(
-            [Gender.MALE, Gender.FEMALE],
-            "Gender must be either 'MALE' or 'FEMALE'",
-          )
-          .optional(),
-        dateOfBirth: z
-          .string()
-          .refine((data) => !isNaN(Date.parse(data)), "Invalid date of birth")
-          .optional(),
-        bloodGroup: z
-          .enum(
-            [
-              BloodGroup.AB_NEGATIVE,
-              BloodGroup.AB_POSITIVE,
-              BloodGroup.A_NEGATIVE,
-              BloodGroup.A_POSITIVE,
-              BloodGroup.B_NEGATIVE,
-              BloodGroup.B_POSITIVE,
-              BloodGroup.O_NEGATIVE,
-              BloodGroup.O_POSITIVE,
-            ],
-            "Invalid blood group",
-          )
-          .optional(),
-        hasAllergies: z.boolean("Has allergies must be boolean").optional(),
-        hasDiabetes: z.boolean("Has diabetes must be boolean").optional(),
-        height: z.string("Height must be string").optional(),
-        weight: z.string("Weight must be string").optional(),
-        smokingStatus: z.boolean("Smoking status must be boolean").optional(),
-        dietaryPreferences: z
-          .string("Dietary preferences must be string")
-          .optional(),
-        pregnancyStatus: z
-          .boolean("Pregnancy status must be boolean")
-          .optional(),
-        mentalHealthHistory: z
-          .string("Mental health history must be string")
-          .optional(),
-        immunizationStatus: z
-          .string("Immunization status must be string")
-          .optional(),
-        hasPastSurgeries: z
-          .boolean("Has past surgeries must be boolean")
-          .optional(),
-        recentAnxiety: z.boolean("Recent anxiety must be boolean").optional(),
-        recentDepression: z
-          .boolean("Recent depression must be boolean")
-          .optional(),
-        maritalStatus: z.string("Marital status must be string").optional(),
-      })
-      .optional(),
-    medicalReports: z
-      .array(
-        z.object({
-          shouldDelete: z.boolean("Should delete must be boolean").optional(),
-          reportId: z.uuid("Report ID must be UUID").optional(),
-          reportName: z.string("Report name must be string").optional(),
-          reportLink: z.url("Report link must be URL").optional(),
-        }),
-      )
-      .optional()
-      .refine((reports) => {
-        if (!reports || reports.length === 0) return true; // If medicalReports is not provided, it's valid
-        for (const report of reports) {
-          if (report.shouldDelete === true && !report.reportId) return false;
-          if (report.reportId && !report.shouldDelete) {
-            return false;
-          }
-          if (report.reportName && !report.reportLink) {
-            return false; // If report is marked for deletion, we don't need to validate name and link
-          }
-          if (report.reportLink && !report.reportName) {
-            return false; // If report is marked for deletion, we don't need to validate name and link
-          }
-          return true;
-        }
+const updatePatientProfileZodSchema = z.object({
+  patientInfo: z
+    .object({
+      name: z
+        .string("Name must be a string")
+        .min(1, "Name cannot be empty")
+        .max(100, "Name must be less than 100 characters")
+        .optional(),
+      profilePhoto: z.url("Profile photo must be a valid URL").optional(),
+      contactNumber: z
+        .string("Contact number must be a string")
+        .min(1, "Contact number cannot be empty")
+        .max(20, "Contact number must be less than 20 characters")
+        .optional(),
+      address: z
+        .string("Address must be a string")
+        .min(1, "Address cannot be empty")
+        .max(200, "Address must be less than 200 characters")
+        .optional(),
+    })
+    .optional(),
+  patientHealthData: z
+    .object({
+      gender: z.enum([Gender.FEMALE, Gender.MALE]).optional(),
+      dateOfBirth: z
+        .string()
+        .refine((date) => !isNaN(Date.parse(date)), {
+          message: "Invalid date format",
+        })
+        .optional(),
+      bloodGroup: z
+        .enum([
+          BloodGroup.A_POSITIVE,
+          BloodGroup.A_NEGATIVE,
+          BloodGroup.B_POSITIVE,
+          BloodGroup.B_NEGATIVE,
+          BloodGroup.AB_POSITIVE,
+          BloodGroup.AB_NEGATIVE,
+          BloodGroup.O_POSITIVE,
+          BloodGroup.O_NEGATIVE,
+        ])
+        .optional(),
+      hasAllergies: z.boolean().optional(),
+      hasDiabetes: z.boolean().optional(),
+      height: z.string().optional(),
+      weight: z.string().optional(),
+      smokingStatus: z.boolean().optional(),
+      dietaryPreferences: z.string().optional(),
+      pregnancyStatus: z.boolean().optional(),
+      mentalHealthHistory: z.string().optional(),
+      immunizationStatus: z.string().optional(),
+      hasPastSurgeries: z.boolean().optional(),
+      recentAnxiety: z.boolean().optional(),
+      recentDepression: z.boolean().optional(),
+      maritalStatus: z.string().optional(),
+    })
+    .optional(),
+  medicalReports: z
+    .array(
+      z.object({
+        shouldDelete: z.boolean().optional(),
+        reportId: z.uuid().optional(),
+        reportName: z.string().optional(),
+        reportLink: z.url().optional(),
       }),
-  }),
-};
+    )
+    .optional()
+    .refine(
+      (reports) => {
+        if (!reports || reports.length === 0) return true; // If no reports, it's valid
+
+        for (const report of reports) {
+          // case-1
+          if (report.shouldDelete === true && !report.reportId) {
+            return false; // If shouldDelete is true, reportId must be provided
+          }
+
+          // case-2
+          if (report.reportId && !report.shouldDelete) {
+            return false; // If reportId is provided, shouldDelete must be true
+          }
+
+          //case-3
+          if (report.reportName && !report.reportLink) {
+            return false; // If reportName is provided, reportLink must also be provided
+          }
+
+          //case-4
+          if (report.reportLink && !report.reportName) {
+            return false; // If reportLink is provided, reportName must also be provided
+          }
+
+          return true; // If none of the above conditions are violated, it's valid
+        }
+      },
+      {
+        message:
+          "Invalid medical report data. If shouldDelete is true, reportId must be provided. If reportId is provided, shouldDelete must be true. If reportName is provided, reportLink must also be provided and vice versa.",
+      },
+    ),
+});
 
 export const PatientValidation = {
   updatePatientProfileZodSchema,
