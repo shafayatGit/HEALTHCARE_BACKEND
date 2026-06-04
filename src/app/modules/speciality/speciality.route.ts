@@ -3,7 +3,7 @@ import { specialityController } from "./speciality.controller";
 import { Role } from "../../../generated/prisma/enums";
 import { checkAuth } from "../../middleware/checkAuth";
 import { multerUpload } from "../../config/multer.config";
-import { validateRequest } from "../../shared/validateRequest";
+import { validateRequest } from "../../middleware/validateRequest";
 import { specialityValidation } from "./speciality.validation";
 
 const router = Router();

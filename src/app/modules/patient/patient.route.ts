@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { patientController } from "./patient.controller";
 import { checkAuth } from "../../middleware/checkAuth";
-import { validateRequest } from "../../shared/validateRequest";
+import { validateRequest } from "../../middleware/validateRequest";
 import { PatientValidation } from "./patient.validation";
 import { Role } from "../../../generated/prisma/enums";
 import { multerUpload } from "../../config/multer.config";

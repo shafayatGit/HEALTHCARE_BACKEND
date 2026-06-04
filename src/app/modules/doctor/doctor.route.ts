@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { doctorController } from "./doctor.controller";
-import { validateRequest } from "../../shared/validateRequest";
+import { validateRequest } from "../../middleware/validateRequest";
 import { updateDoctorValidationSchema } from "./doctor.validation";
 
 const router = Router();
