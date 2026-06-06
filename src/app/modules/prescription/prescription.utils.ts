@@ -32,7 +32,7 @@ export const generatePrescriptionPDF = async (
       });
 
       doc.moveDown(0.5);
-      doc.fontSize(10).font("Helvetica").text("PH Healthcare Services", {
+      doc.fontSize(10).font("Helvetica").text("Healthcare Services", {
         align: "center",
       });
       doc.text("Your Health, Our Priority", { align: "center" });

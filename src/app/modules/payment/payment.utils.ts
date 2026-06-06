@@ -41,7 +41,7 @@ export const generateInvoicePdf = async (
       });
 
       doc.moveDown(0.5);
-      doc.fontSize(10).font("Helvetica").text("PH Healthcare Services", {
+      doc.fontSize(10).font("Helvetica").text("Healthcare Services", {
         align: "center",
       });
       doc.text("Your Health, Our Priority", { align: "center" });
@@ -155,14 +155,14 @@ export const generateInvoicePdf = async (
         .fontSize(9)
         .font("Helvetica")
         .text(
-          "Thank you for choosing PH Healthcare. This is an electronically generated invoice.",
+          "Thank you for choosing Healthcare. This is an electronically generated invoice.",
           {
             align: "center",
           },
         );
 
       doc.text(
-        "If you have any questions, please contact us at support@ph-healthcare.com",
+        "If you have any questions, please contact us at support@healthcare.com",
         {
           align: "center",
         },

@@ -1,45 +1,100 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextFunction, Request, Response } from "express";
-import { envVars } from "../config/env";
 import status from "http-status";
 import z from "zod";
-import { TErrorResponse, TErrrorSources } from "../interfaces/error.interface";
-import { handleZodError } from "../errorHelpers/handleZodError";
+import { Prisma } from "../../generated/prisma/client";
+import { envVars } from "../config/env";
 import AppError from "../errorHelpers/AppError";
-import { deleteFileFromCloudinary } from "../config/cloudinary.config";
+import {
+  handlePrismaClientKnownRequestError,
+  handlePrismaClientUnknownError,
+  handlePrismaClientValidationError,
+  handlerPrismaClientInitializationError,
+  handlerPrismaClientRustPanicError,
+} from "../errorHelpers/handlePrismaErrors";
+import { handleZodError } from "../errorHelpers/handleZodError";
+import { TErrorResponse, TErrorSources } from "../interfaces/error.interface";
 import { deleteUploadedFilesFromGlobalErrorHandler } from "../utils/deleteUploadedFilesFromGlobalErrorHandler";
 
-const globarErrorHandler = async (
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const globalErrorHandler = async (
   err: any,
   req: Request,
   res: Response,
   next: NextFunction,
 ) => {
   if (envVars.NODE_ENV === "development") {
-    console.log("Error from Global Error Handler: ", err);
+    console.log("Error from Global Error Handler", err);
   }
 
-  // if (req.file) {
-  //   await deleteFileFromCloudinary(req.file.path);
+  // if(req.file){
+  //     await deleteFileFromCloudinary(req.file.path)
   // }
 
-  // if (req.files && Array.isArray(req.files) && req.files.length > 0) {
-  //   const imageUrls = req.files.map((file) => file.path);
-  //   await Promise.all(imageUrls.map((url) => deleteFileFromCloudinary(url)));
+  // if(req.files && Array.isArray(req.files) && req.files.length > 0){
+  //     const imageUrls = req.files.map((file) => file.path);
+  //     await Promise.all(imageUrls.map(url => deleteFileFromCloudinary(url)));
   // }
   await deleteUploadedFilesFromGlobalErrorHandler(req);
-  let errorSources: TErrrorSources[] = [];
 
+  let errorSources: TErrorSources[] = [];
   let statusCode: number = status.INTERNAL_SERVER_ERROR;
-
   let message: string = "Internal Server Error";
-
   let stack: string | undefined = undefined;
 
-  if (err instanceof z.ZodError) {
+  //Zod Error Patttern
+  /*
+     error.issues; 
+    /* [
+      {
+        expected: 'string',
+        code: 'invalid_type',
+        path: [ 'username' , 'password' ], => username password
+        message: 'Invalid input: expected string'
+      },
+      {
+        expected: 'number',
+        code: 'invalid_type',
+        path: [ 'xp' ],
+        message: 'Invalid input: expected number'
+      }
+    ] 
+    */
+  if (err instanceof Prisma.PrismaClientKnownRequestError) {
+    const simplifiedError = handlePrismaClientKnownRequestError(err);
+    statusCode = simplifiedError.statusCode as number;
+    message = simplifiedError.message;
+    errorSources = [...(simplifiedError.errorSources ?? [])];
+    stack = err.stack;
+  } else if (err instanceof Prisma.PrismaClientUnknownRequestError) {
+    const simplifiedError = handlePrismaClientUnknownError(err);
+    statusCode = simplifiedError.statusCode as number;
+    message = simplifiedError.message;
+    errorSources = [...(simplifiedError.errorSources ?? [])];
+    stack = err.stack;
+  } else if (err instanceof Prisma.PrismaClientValidationError) {
+    const simplifiedError = handlePrismaClientValidationError(err);
+    statusCode = simplifiedError.statusCode as number;
+    message = simplifiedError.message;
+    errorSources = [...(simplifiedError.errorSources ?? [])];
+    stack = err.stack;
+  } else if (err instanceof Prisma.PrismaClientRustPanicError) {
+    const simplifiedError = handlerPrismaClientRustPanicError();
+    statusCode = simplifiedError.statusCode as number;
+    message = simplifiedError.message;
+    errorSources = [...(simplifiedError.errorSources ?? [])];
+    stack = err.stack;
+  } else if (err instanceof Prisma.PrismaClientInitializationError) {
+    const simplifiedError = handlerPrismaClientInitializationError(err);
+    statusCode = simplifiedError.statusCode as number;
+    message = simplifiedError.message;
+    errorSources = [...(simplifiedError.errorSources ?? [])];
+    stack = err.stack;
+  } else if (err instanceof z.ZodError) {
     const simplifiedError = handleZodError(err);
     statusCode = simplifiedError.statusCode as number;
     message = simplifiedError.message;
-    errorSources.push(...(simplifiedError.errorSources || []));
+    errorSources = [...(simplifiedError.errorSources ?? [])];
     stack = err.stack;
   } else if (err instanceof AppError) {
     statusCode = err.statusCode;
@@ -52,10 +107,9 @@ const globarErrorHandler = async (
       },
     ];
   } else if (err instanceof Error) {
-    // JS native class ERROR which is the parent of all the errors in JS
     statusCode = status.INTERNAL_SERVER_ERROR;
     message = err.message;
-    stack = err.stack; // which line the error is coming from
+    stack = err.stack;
     errorSources = [
       {
         path: "",
@@ -66,12 +120,11 @@ const globarErrorHandler = async (
 
   const errorResponse: TErrorResponse = {
     success: false,
-    message,
+    message: message,
     errorSources,
-    // stack: envVars.NODE_ENV === "development" ? stack : undefined, // we will use it when needed
     error: envVars.NODE_ENV === "development" ? err : undefined,
+    stack: envVars.NODE_ENV === "development" ? stack : undefined,
   };
 
   res.status(statusCode).json(errorResponse);
 };
-export default globarErrorHandler;
