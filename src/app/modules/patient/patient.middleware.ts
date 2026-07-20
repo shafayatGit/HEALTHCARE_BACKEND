@@ -38,10 +38,10 @@ export const updateMyPatientProfileMiddleware = (
       payload.medicalReports = newReports;
     }
   }
-  console.log(payload);
+  // console.log(payload);
 
   req.body = payload;
-  console.log(req.body);
+  // console.log(req.body);
 
   next();
 };

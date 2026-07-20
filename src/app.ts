@@ -1,20 +1,22 @@
 import express, { Application, Request, Response } from "express";
 import { prisma } from "./app/lib/prisma";
 import { IndexRoutes } from "./app/routes";
-import globarErrorHandler from "./app/middleware/globalErrorHandler";
 import notFound from "./app/middleware/notFound";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import path from "path";
 import { envVars } from "./app/config/env";
-import qs from "qs";
+import qs from "qs"; // named export
 import { PaymentController } from "./app/modules/payment/payment.controller";
 import cron from "node-cron";
 import { AppointmentService } from "./app/modules/appointment/appointment.service";
+import { globalErrorHandler } from "./app/middleware/globalErrorHandler"; // default export
+import { toNodeHandler } from "better-auth/node";
+import { auth } from "./app/lib/auth";
 const app: Application = express();
 app.set("query parser", (str: string) => qs.parse(str));
-
-app.set("view engine", "ejs");
+app.use("/api/auth", toNodeHandler(auth));
+app.set("view engine", "ejs"); // Set the views directory to the absolute path of src/app/templates
 app.set("views", path.resolve(process.cwd(), `src/app/templates`));
 
 app.post(
@@ -69,7 +71,7 @@ app.get("/", async (req: Request, res: Response) => {
   res.status(200).json(specialities);
 });
 
-app.use(globarErrorHandler);
+app.use(globalErrorHandler);
 app.use(notFound);
 
 export default app;

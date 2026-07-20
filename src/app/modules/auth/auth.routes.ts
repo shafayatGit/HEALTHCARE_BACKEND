@@ -11,7 +11,7 @@ router.post("/login", AuthController.loginUser);
 
 router.get(
   "/me",
-  checkAuth(Role.ADMIN, Role.DOCTOR, Role.PATIENT),
+  checkAuth(Role.SUPER_ADMIN, Role.ADMIN, Role.DOCTOR, Role.PATIENT),
   AuthController.getMe,
 );
 

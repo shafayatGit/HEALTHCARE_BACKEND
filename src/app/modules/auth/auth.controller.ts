@@ -16,6 +16,7 @@ const registerPatient = catchAsync(async (req: Request, res: Response) => {
   tokenUtils.setAccessTokenCookie(res, accessToken);
   tokenUtils.setRefreshTokenCookie(res, refreshToken);
   tokenUtils.setBetterAuthSessionCookie(res, token as string);
+  // console.log("Token:", token);
   sendResponse(res, {
     httpStatusCode: status.CREATED,
     success: true,

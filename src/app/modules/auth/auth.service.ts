@@ -66,6 +66,7 @@ const registerPatient = async (payload: IRegisterPatient) => {
     isDeleted: data.user.isDeleted,
     emailVerified: data.user.emailVerified,
   });
+  console.log("data", data);
   return {
     ...data,
     accessToken,
@@ -117,7 +118,7 @@ const loginUser = async (payload: ILoginUser) => {
 
 const getMe = async (user: IRequestUser) => {
   const { userId } = user;
-  console.log("UserID: ", userId);
+  // console.log("UserID: ", userId);
   const userExist = await prisma.user.findUnique({
     where: {
       id: user.userId,
@@ -293,6 +294,7 @@ const verifyEmail = async (email: string, otp: string) => {
       },
     });
   }
+  console.log("from verifyEmail:", result.token);
   return result;
 };
 

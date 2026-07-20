@@ -71,6 +71,7 @@ export const checkAuth =
             );
           }
           if (authRoles.length > 0 && !authRoles.includes(user.role as Role)) {
+            console.log(authRoles, user.role);
             throw new AppError(
               status.FORBIDDEN,
               "Forbidden, you don't have permission to access this resource.",
