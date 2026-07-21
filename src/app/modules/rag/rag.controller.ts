@@ -2,6 +2,9 @@ import { Request, Response } from "express";
 import { catchAsync } from "../../shared/catchAsync";
 import { sendResponse } from "../../shared/sendResponse";
 import status from "http-status";
+import { RAGService } from "./rag.service";
+
+const ragService = new RAGService();
 
 const getStats = catchAsync(async (req: Request, res: Response) => {
   // const stats = await RagService.getStats();
@@ -23,7 +26,7 @@ const getStats = catchAsync(async (req: Request, res: Response) => {
 
 const ingestDoctors = catchAsync(async (req: Request, res: Response) => {
   const { doctors } = req.body;
-  // const result = await RagService.ingestDoctors(doctors);
+  const result = await ragService.ingestDoctorsData();
   sendResponse(res, {
     httpStatusCode: status.OK,
     success: true,

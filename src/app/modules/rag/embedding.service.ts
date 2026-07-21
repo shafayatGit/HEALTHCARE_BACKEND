@@ -32,7 +32,7 @@ export class EmbeddingService {
       if (!response.ok) {
         throw new Error(`Open Router Api Error ${response.status}`);
       }
-      const data = response.json();
+      const data = await response.json();
       if (!data.data || data.data.length == 0) {
         throw new Error(`No Embedding Data Returned`);
       }
